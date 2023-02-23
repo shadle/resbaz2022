@@ -1,8 +1,8 @@
 ---
 title: "Your awesome project title"
-author:
-  name: "You et al"
-  affiliation: "From whence you hail"
+author: John Shadle
+name: "John Shadle"
+affiliation: "CHDR"
 date: today
 bibliography: refs.bib
 from: markdown+emoji
@@ -10,6 +10,7 @@ format:
   html:
     code-fold: false
     link-external-newwindow: true
+    toc: true
 theme:
   light: flatly
   dark: darkly
@@ -31,8 +32,15 @@ theme:
 :::
 
 # Introduction
+## Sub-heading
+- list item 1
+- list item 2
 
+$\sqrt{4} = 2$
+inline math: $E = mc^{2}$
+@chamberlin1897 says use multiple working hopotheses.
 :::{.callout-tip}
+
 # Markdown exercise
 
 - Check out [Quarto's markdown guide](https://quarto.org/docs/authoring/markdown-basics.html)
@@ -72,8 +80,13 @@ If you want to use Python code check out the documentation [here](https://quarto
  - render the document and hit the :heavy_check_mark: in zoom
 :::
 
+<!--
+everything in here is ignored
+-->
 
 ```{r Libraries}
+#| echo: false
+#| output: false
 #| include: true
 
 if (!require("pacman")) install.packages("pacman", repos="http://cran.r-project.org")
@@ -92,6 +105,30 @@ pacman::p_load(ggplot2, palmerpenguins)    # Install & load packages
   - Does not matter what they contain but feel free to blurb something in there
 
 - render the document and hit the :heavy_check_mark: in zoom
+:::
+
+::: {.panel-tabset}
+
+# tab 1
+
+Hello everybody
+
+# tab 2 has a long title
+
+Thanks for coming
+
+# tab 3
+
+Blank
+
+# tab 4
+
+More
+
+# tab 5 asl;kjasdflkjasd;lfkjasdf;lkjasdfl;kj
+
+![here is a pic](./images/fixing_problems.png)
+
 :::
 
 # Images
